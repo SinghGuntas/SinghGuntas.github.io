@@ -19,36 +19,23 @@
         header {
             background: #333;
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77aaff 3px solid;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            float: right;
-            display: inline;
-            padding: 0 20px 0 20px;
+            padding: 20px 0;
+            text-align: center;
         }
         header h1 {
-            float: left;
-            margin-top: 0;
-            margin-right: 10px;
+            margin: 0;
         }
-        .about, .work, .education, .footer {
+        section {
             padding: 20px 0;
-            border-bottom: 1px #ddd solid;
         }
-        .about h2, .work h2, .education h2 {
-            color: #333;
+        .work-experience, .education {
+            margin-bottom: 20px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
         }
     </style>
 </head>
@@ -56,12 +43,53 @@
 <header>
     <div class="container">
         <h1>Guntas Singh</h1>
-        <ul>
-            <li><a href="mailto:guntassingh1998@gmail.com">Email</a></li>
-            <li><a href="tel:+917986673369">Call</a></li>
-        </ul>
-
-</div>
+        <p>(+91)7986673369 | <a href="mailto:guntassingh1998@gmail.com" style="color: #fff;">guntassingh1998@gmail.com</a></p>
+    </div>
 </header>
+<div class="container">
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Senior Software Development Engineer with extensive experience in architecting and implementing software solutions, improving user onboarding processes, and integrating third-party services. Passionate about technology and problem-solving.</p>
+    </section>
+    <section class="work-experience">
+        <h2>Work Experience</h2>
+        <h3>Xflow Payments, Bangalore</h3>
+        <p><strong>Senior Software Development Engineer (July 2023 - Present)</strong></p>
+        <ul>
+            <li>Architected and implemented a generic checklist service to automate user account activation, achieving a 95% reduction in onboarding time and increasing user onboarding from 10 to 100 users per month.</li>
+            <li>Orchestrated the integration with Transfermate Inc to support multi-currency for the Exports product, successfully launching in 30+ new currencies.</li>
+            <li>Integrated with Transfermate to enable the imports product, designing and modeling importer-led flows.</li>
+        </ul>
+        <h3>Sharechat, Bangalore</h3>
+        <p><strong>Software Development Engineer (June 2021 - July 2023)</strong></p>
+        <ul>
+            <li>Engineered a robust service using Golang to manage user bans across various entities, handling 4000-5000 requests per second at peak.</li>
+            <li>Directed an end-to-end project for user data deletion in compliance with Indian government policies, ensuring seamless integration across teams.</li>
+        </ul>
+        <h3>Brick&Bolt, Bangalore</h3>
+        <p><strong>Software Development Engineer (October 2020 - June 2021)</strong></p>
+        <ul>
+            <li>Developed a central blog service using SpringBoot and MongoDB, increasing customer landing and retention on the main website by 40%.</li>
+            <li>Enhanced the performance of a contractor dashboard, reducing the average API response time from 1.3 seconds to under 300 milliseconds.</li>
+        </ul>
+        <h3>OYO ROOMS, Bangalore</h3>
+        <p><strong>Software Development Engineer (January 2020 - October 2020)</strong></p>
+        <ul>
+            <li>Created a feature using VueJs and Laravel to export user bookings into an ICalendar link for seamless import into channel partners' systems.</li>
+            <li>Decomposed the monolithic codebase of the Home Management System into microservices.</li>
+        </ul>
+    </section>
+    <section class="education">
+        <h2>Education</h2>
+        <p><strong>Thapar Institute of Engineering and Technology, Patiala</strong></p>
+        <p>Bachelors in Computer Engineering (July 2016 - July 2020)<br>Overall CGPA: 8.26/10</p>
+    </section>
+</div>
+<footer>
+    <div class="container">
+        <p>Contact me at: <a href="mailto:guntassingh1998@gmail.com" style="color: #fff;">guntassingh1998@gmail.com</a></p>
+        <p>&copy; 2024 Guntas Singh</p>
+    </div>
+</footer>
 </body>
 </html>
