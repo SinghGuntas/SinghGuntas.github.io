@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guntas Singh - Personal Webpage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            background: #f4f4f4;
+            color: #333;
             line-height: 1.6;
         }
         .container {
@@ -19,11 +22,16 @@
         header {
             background: #333;
             color: #fff;
-            padding: 20px 0;
+            padding: 15px 0;
             text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         header h1 {
             margin: 0;
+            font-family: 'Montserrat', sans-serif;
         }
         header img {
             width: 150px;
@@ -31,17 +39,51 @@
             border-radius: 50%;
             margin-top: 10px;
         }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
         section {
-            padding: 20px 0;
+            padding: 80px 0;
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
         }
         .work-experience, .education {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         footer {
             background: #333;
             color: #fff;
             text-align: center;
             padding: 10px 0;
+        }
+        .button {
+            display: inline-block;
+            font-size: 16px;
+            color: #fff;
+            background: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #575757;
         }
     </style>
 </head>
@@ -50,15 +92,19 @@
     <div class="container">
         <h1>Guntas Singh</h1>
         <img src="1691773892074.jpeg" alt="Guntas Singh">
-        <p>(+91)7986673369 | <a href="mailto:guntassingh1998@gmail.com" style="color: #fff;">guntassingh1998@gmail.com</a></p>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#work">Work Experience</a>
+            <a href="#education">Education</a>
+        </nav>
     </div>
 </header>
 <div class="container">
-    <section class="about">
+    <section id="about" class="about">
         <h2>About Me</h2>
         <p>Senior Software Development Engineer with extensive experience in architecting and implementing software solutions, improving user onboarding processes, and integrating third-party services. Passionate about technology and problem-solving.</p>
     </section>
-    <section class="work-experience">
+    <section id="work" class="work-experience">
         <h2>Work Experience</h2>
         <h3>Xflow Payments, Bangalore</h3>
         <p><strong>Senior Software Development Engineer (July 2023 - Present)</strong></p>
@@ -86,7 +132,7 @@
             <li>Decomposed the monolithic codebase of the Home Management System into microservices.</li>
         </ul>
     </section>
-    <section class="education">
+    <section id="education" class="education">
         <h2>Education</h2>
         <p><strong>Thapar Institute of Engineering and Technology, Patiala</strong></p>
         <p>Bachelors in Computer Engineering (July 2016 - July 2020)<br>Overall CGPA: 8.26/10</p>
@@ -98,5 +144,15 @@
         <p>&copy; 2024 Guntas Singh</p>
     </div>
 </footer>
+<script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
 </body>
 </html>
